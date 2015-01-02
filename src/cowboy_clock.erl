@@ -166,6 +166,8 @@ month(12) -> <<"Dec">>.
 
 %% Tests.
 
+integer_to_binary(I) -> list_to_binary(integer_to_list(I)).
+
 -ifdef(TEST).
 update_rfc1123_test_() ->
 	Tests = [

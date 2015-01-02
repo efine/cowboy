@@ -1318,6 +1318,8 @@ status(510) -> <<"510 Not Extended">>;
 status(511) -> <<"511 Network Authentication Required">>;
 status(B) when is_binary(B) -> B.
 
+integer_to_binary(I) -> list_to_binary(integer_to_list(I)).
+
 %% Tests.
 
 -ifdef(TEST).
